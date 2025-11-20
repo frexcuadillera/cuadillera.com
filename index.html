@@ -3,170 +3,9 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Family Website</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Cuadillera Family Website</title>
   <script src="/_sdk/element_sdk.js"></script>
-  <style>
-    body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Georgia', serif;
-      overflow-x: hidden;
-    }
-    
-    *, *::before, *::after {
-      box-sizing: inherit;
-    }
-
-    html, body {
-      height: 100%;
-    }
-
-    .container {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Header Styles */
-    .header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 2rem 5%;
-      text-align: center;
-    }
-
-    .family-name {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 0 0 0.5rem 0;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .welcome-message {
-      font-size: 1.1rem;
-      margin: 0;
-      opacity: 0.95;
-    }
-
-    /* Hero Section */
-    .hero {
-      background-color: #f8f9ff;
-      padding: 4rem 5%;
-      text-align: center;
-      flex: 1;
-    }
-
-    .hero-icon {
-      font-size: 5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .tagline {
-      font-size: 1.8rem;
-      color: #2d3748;
-      margin: 0 0 3rem 0;
-      font-style: italic;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Cards Section */
-    .cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto 3rem auto;
-      padding: 0 1rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 2px solid #e2e8f0;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-    }
-
-    .card-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .card-title {
-      font-size: 1.5rem;
-      color: #2d3748;
-      margin: 0 0 1rem 0;
-    }
-
-    .card-text {
-      font-size: 1rem;
-      color: #4a5568;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* CTA Button */
-    .cta-button {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      color: white;
-      border: none;
-      padding: 1rem 2.5rem;
-      font-size: 1.2rem;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
-      font-family: 'Georgia', serif;
-    }
-
-    .cta-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
-    }
-
-    /* Footer */
-    .footer {
-      background-color: #2d3748;
-      color: white;
-      text-align: center;
-      padding: 2rem 5%;
-      margin-top: auto;
-    }
-
-    .footer-text {
-      margin: 0;
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-
-    @media (max-width: 768px) {
-      .family-name {
-        font-size: 2rem;
-      }
-
-      .tagline {
-        font-size: 1.4rem;
-      }
-
-      .hero {
-        padding: 3rem 5%;
-      }
-
-      .cards-container {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-  <style>@view-transition { navigation: auto; }</style>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
@@ -206,7 +45,7 @@
     </div><button class="cta-button" id="ctaButton">Explore Our Gallery</button>
    </section><!-- Footer -->
    <footer class="footer">
-    <p class="footer-text" id="footerText">Made with ❤️ by our family · Est. 2024</p>
+    <p class="footer-text" id="footerText">Made with ❤️ by our family · Est. 2025</p>
    </footer>
   </div>
   <script>
@@ -217,7 +56,7 @@
       about_heading: "Our Family Story",
       about_text: "We're a family that loves adventure, good food, and spending quality time together. From hiking trips to game nights, every moment is special.",
       cta_button: "Explore Our Gallery",
-      footer_text: "Made with ❤️ by our family · Est. 2024",
+      footer_text: "Made with ❤️ by our family · Est. 2025",
       header_bg_start: "#667eea",
       header_bg_end: "#764ba2",
       hero_bg: "#f8f9ff",
