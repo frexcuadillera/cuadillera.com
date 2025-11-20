@@ -1,16 +1,359 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title> Cuadillera </title>
-		<link rel="stylesheet" href="css/styles.css">
-    <meta name="google-adsense-account" content="ca-pub-3094726574612716">
-	</head>
-<body>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Website</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      overflow-x: hidden;
+    }
+    
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
 
-	<div id="wrapper">
-	</div>
+    html, body {
+      height: 100%;
+    }
 
-</body>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/main.js"></script>
+    .container {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Styles */
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem 5%;
+      text-align: center;
+    }
+
+    .family-name {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0 0 0.5rem 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .welcome-message {
+      font-size: 1.1rem;
+      margin: 0;
+      opacity: 0.95;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #f8f9ff;
+      padding: 4rem 5%;
+      text-align: center;
+      flex: 1;
+    }
+
+    .hero-icon {
+      font-size: 5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tagline {
+      font-size: 1.8rem;
+      color: #2d3748;
+      margin: 0 0 3rem 0;
+      font-style: italic;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Cards Section */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #e2e8f0;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      color: #2d3748;
+      margin: 0 0 1rem 0;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #4a5568;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* CTA Button */
+    .cta-button {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+      font-family: 'Georgia', serif;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #2d3748;
+      color: white;
+      text-align: center;
+      padding: 2rem 5%;
+      margin-top: auto;
+    }
+
+    .footer-text {
+      margin: 0;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .family-name {
+        font-size: 2rem;
+      }
+
+      .tagline {
+        font-size: 1.4rem;
+      }
+
+      .hero {
+        padding: 3rem 5%;
+      }
+
+      .cards-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="container"><!-- Header -->
+   <header class="header">
+    <h1 class="family-name" id="familyName">The Cuadillera Family</h1>
+    <p class="welcome-message" id="welcomeMessage">Welcome to our family corner of the internet!</p>
+   </header><!-- Hero Section -->
+   <section class="hero">
+    <div class="hero-icon">
+     🏡
+    </div>
+    <h2 class="tagline" id="tagline">Creating memories together, one adventure at a time</h2><!-- Feature Cards -->
+    <div class="cards-container">
+     <div class="card">
+      <div class="card-icon">
+       📸
+      </div>
+      <h3 class="card-title" id="aboutHeading">Our Family Story</h3>
+      <p class="card-text" id="aboutText">We're a family that loves adventure, good food, and spending quality time together. From hiking trips to game nights, every moment is special.</p>
+     </div>
+     <div class="card">
+      <div class="card-icon">
+       🎉
+      </div>
+      <h3 class="card-title">Recent Events</h3>
+      <p class="card-text">Stay up to date with birthdays, anniversaries, reunions, and all the celebrations that bring us together.</p>
+     </div>
+     <div class="card">
+      <div class="card-icon">
+       💌
+      </div>
+      <h3 class="card-title">Stay Connected</h3>
+      <p class="card-text">Share updates, photos, and messages with family members near and far. We're always just a click away!</p>
+     </div>
+    </div><button class="cta-button" id="ctaButton">Explore Our Gallery</button>
+   </section><!-- Footer -->
+   <footer class="footer">
+    <p class="footer-text" id="footerText">Made with ❤️ by our family · Est. 2024</p>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      family_name: "The Cuadillera Family",
+      welcome_message: "Welcome to our family corner of the internet!",
+      tagline: "Creating memories together, one adventure at a time",
+      about_heading: "Our Family Story",
+      about_text: "We're a family that loves adventure, good food, and spending quality time together. From hiking trips to game nights, every moment is special.",
+      cta_button: "Explore Our Gallery",
+      footer_text: "Made with ❤️ by our family · Est. 2024",
+      header_bg_start: "#667eea",
+      header_bg_end: "#764ba2",
+      hero_bg: "#f8f9ff",
+      card_bg: "#ffffff",
+      text_primary: "#2d3748",
+      footer_bg: "#2d3748"
+    };
+
+    async function onConfigChange(config) {
+      const familyName = document.getElementById('familyName');
+      const welcomeMessage = document.getElementById('welcomeMessage');
+      const tagline = document.getElementById('tagline');
+      const aboutHeading = document.getElementById('aboutHeading');
+      const aboutText = document.getElementById('aboutText');
+      const ctaButton = document.getElementById('ctaButton');
+      const footerText = document.getElementById('footerText');
+
+      familyName.textContent = config.family_name || defaultConfig.family_name;
+      welcomeMessage.textContent = config.welcome_message || defaultConfig.welcome_message;
+      tagline.textContent = config.tagline || defaultConfig.tagline;
+      aboutHeading.textContent = config.about_heading || defaultConfig.about_heading;
+      aboutText.textContent = config.about_text || defaultConfig.about_text;
+      ctaButton.textContent = config.cta_button || defaultConfig.cta_button;
+      footerText.textContent = config.footer_text || defaultConfig.footer_text;
+
+      const headerBgStart = config.header_bg_start || defaultConfig.header_bg_start;
+      const headerBgEnd = config.header_bg_end || defaultConfig.header_bg_end;
+      const heroBg = config.hero_bg || defaultConfig.hero_bg;
+      const cardBg = config.card_bg || defaultConfig.card_bg;
+      const textPrimary = config.text_primary || defaultConfig.text_primary;
+      const footerBg = config.footer_bg || defaultConfig.footer_bg;
+
+      const header = document.querySelector('.header');
+      header.style.background = `linear-gradient(135deg, ${headerBgStart} 0%, ${headerBgEnd} 100%)`;
+
+      const hero = document.querySelector('.hero');
+      hero.style.backgroundColor = heroBg;
+
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.style.backgroundColor = cardBg;
+      });
+
+      const cardTitles = document.querySelectorAll('.card-title');
+      cardTitles.forEach(title => {
+        title.style.color = textPrimary;
+      });
+
+      tagline.style.color = textPrimary;
+
+      const footer = document.querySelector('.footer');
+      footer.style.backgroundColor = footerBg;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.header_bg_start || defaultConfig.header_bg_start,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ header_bg_start: value });
+              }
+            }
+          },
+          {
+            get: () => config.header_bg_end || defaultConfig.header_bg_end,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ header_bg_end: value });
+              }
+            }
+          },
+          {
+            get: () => config.hero_bg || defaultConfig.hero_bg,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ hero_bg: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_primary || defaultConfig.text_primary,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ text_primary: value });
+              }
+            }
+          },
+          {
+            get: () => config.footer_bg || defaultConfig.footer_bg,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.setConfig({ footer_bg: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["family_name", config.family_name || defaultConfig.family_name],
+        ["welcome_message", config.welcome_message || defaultConfig.welcome_message],
+        ["tagline", config.tagline || defaultConfig.tagline],
+        ["about_heading", config.about_heading || defaultConfig.about_heading],
+        ["about_text", config.about_text || defaultConfig.about_text],
+        ["cta_button", config.cta_button || defaultConfig.cta_button],
+        ["footer_text", config.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3094726574612716"
+     crossorigin="anonymous"></script>
+<!-- display-ads-horizontal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3094726574612716"
+     data-ad-slot="6729197513"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a18c7b667e30460',t:'MTc2MzY1MDQ0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
